@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .post {
+        margin: auto;
+        display: block;
+        height: 80%;
+        width: 60%;
+        left: 20%;
+        top: 3%;
+        font-size: 20px;
+        max-width: 750px;
+    }
+
+    /* div {
+        display: table;
+    } */
+
+    img {
+        vertical-align: middle;
+        display: table-cell;
+    }
+
+    span {
+        vertical-align: middle;
+        display: table-cell;
+    }
+</style>
+</head>
+
+<body>
+    <div class="post">
+        <h1>EKG (Electrocardiograph)</h1>
+        <div>
+            <span><img src="img/1.jpg">
+            </span>
+            <span> Elektronik, her alanda olduğu gibi tıp alanında da bir çok buluşun anahtarı durumunda. Tanı
+                ve tedavi sürecinde elektronik tıp cihazları doktorların eli kolu vazifesinde. Görüntüleme sistemleri,
+                operasyon robotları, analiz cihazları ve daha bir çok türde elektronik düzenek, tıbbın hizmetinde. Bu
+                durum
+                elektroniği tıp için olmazsa olmaz haline getiriyor. Buna bağlı olarak da tıp bilimi, elektronik için
+                geniş
+                bir çalışma alanı, elektronik piyasası içinse güzel bir pazar konumunda. Bu yazımda sizlere geçen yıl
+                uygulaması yaptığımız EKG'den bahsedeceğim. </span>
+        </div>
+        <div>
+            <span>
+                <h5>EKG nedir?</h5>
+                Cilde yapıştırılan elektrotlar aracılığı ile grafik olarak kalbin elektriksel
+                aktivitesini (kalbin ritmini,
+                frekansını, kalp atışlarının ritmini, yayılmasını ve reaksiyonun tekrar yok olması) gözlemleyen dalga
+                formudur.
+                Bu işareti incelememizi sağlayan cihazada EKG cihazı denir. Tıpta oldukça kıtymetli bir yeri vardır.
+            </span>
+            <span> <img src="img/2.jpg">
+            </span>
+        </div>
+        <div>
+            <span><img src="img/3.jpg">
+            </span>
+            <span>
+                <h5>Nasıl Çalışır?</h5>
+                Kalbin çalışması incelemek üzere geliştirilen bu cihaz temelde kalbin kasılma ve gevşeme anında
+                meydana gelen
+                seslerin uyarlanması ile çalışırlar. Yapıştırılan elektrotlarda bulunan mikrofonlar sayesinde alınan
+                ses
+                işaretlerinin, elektriksel işaretlere dönüştürülüp, gözlenmesi esasına dayanır.
+            </span>
+        </div>
+        <div>
+            <h5>EKG İşaretinin Alınması </h5>
+            Kalp kasılıp ve gevşerken çok düşük genlikli elektriksel ve ses sinyalleri üretirler. EKG cihazı
+            tasarlarken
+            biz
+            bu sinyalleri güçlendirip bir monitöre veya gözlemleyebileceğimiz bir ortama aktarırız. EKG grafiği elde
+            etmenin
+            birçok yöntemi var. Biz bunlardan üç derivasyonlu olanı kullandık.
+        </div>
+        <div>
+            <img src="img/4.jpg">
+        </div>
+        <div>
+            <span><img src="img/5.jpg">
+            </span>
+            <span>
+                İki kol ve bir ayaktan alınan ölçümlerde, iki kol arasındaki farkı alıp, ayaktaki referans noktası ile
+                karşılaştırıp EKG sinyali elde ediyoruz. Kollar ve bir bacağa bağlanan, ucunda elektrodlar bulunan
+                koaksiyel kablolar ile işaret kuvvetlendiriciye taşınır.
+                Fark alma işlemini enstrümantasyon kuvvetlendiricisi ile gerçekleştirdik. Piyasada bulunan birçok proje
+                ve kitapta ilk katman olan fark işlemini AD624 entegresi ile yapmışlar fakat bu entegreyi Türkiyede
+                bulmak çok zor olabilir, bunun yerine kendi enstrümantasyon kuvvetlendiricimizi tasarladık
+                .Enstrümantasyon kuvvetlendiricisi tasarlamak düşünüldüğü kadar zor bir olay değildir. Birkaç
+                Operational amplifier, birkaç direnç ile gerçekleştirebileceğimiz bir katmandır(en basit şekliyle).
+            </span>
+        </div>
+        <div>
+            <img src="img/6.jpg">
+        </div>
+        <div>
+            Farkı alınmış ve güçlendirilmiş sinyalimizi inceleyecek olursak üst üste binmiş birçok sinyalden oluştuğunu
+            göreceğiz. Bizim için önemli olan EKG sinyalini elde etmek için diğer sinyallerden kurtulmalıyız. Diğer
+            sinyalleri elemek için bir Band-pass filter tasarladık. Band-pass filter merkez frekansı, bizim EKG
+            işaretimizin frekansında olmalıdır yoksa EKG işaretimizide filtrelemiş oluruz.
+        </div>
+        <div>
+            <img src="img/7.jpg">
+        </div>
+        <div>
+            <p>Bu işlemleri yaptıktan sonra çıktı alırsak eğer bir sürpriz ile karşılaşacağız. EKG sinyalimizin 50Hz
+                olan
+                şebeke frekansı üstüne bindiğini göreceğiz. Bu durumu ortadan kaldırmak için bir NOÇ süzgeç kullandık.
+                NOÇ
+                süzgeç aslında bir band söndüren, 50HZ freknasını bastırarak diğer bütün frekansları geçiren bir
+                filtredir.
+                NOÇ süzgecimizi çok iyi ayarlamalıyız, kesim noktalarını uzatmamalıyız. Aksi taktirde EKG sinyalimizin
+                de
+                bastırılmasına sebep olabiliriz.</p>
+            <p>EKG sinyalimizi alacağımız süzüp ve kuvvetlendirecek şekilde tasarladığımız devrenin isis çiziminin ekran
+                görüntüsünü sizlerle paylaşıyorum.</p>
+        </div>
+        <div>
+            <img src="img/8.jpg">
+        </div>
+        <div>
+            Çalışmalaramızda aldığımız birkaç çıktı ile çalışma ortamımızın gösellerini aşşağıda sizlerle paylaşmak
+            istedim :)
+        </div>
+        <div>
+            <img src="img/9.jpg">
+        </div>
+        <div>
+            <ol>
+                <li>Resim EKG yapında kullanılacak malzemeler. Görüldüğü gibi bir avuç malzemeden başka birşey değil :)
+                </li>
+                <li>Resim EKG cihazımızın baskı devresi</li>
+                <li>Resim Devremizin board üzerindeki ilk test sürüşü :)</li>
+                <li>Resim ve Sonuç. Çıkış işaretimiz resimde görüldüğü gibi.</li>
+            </ol>
+        </div>
+        <div>
+            <img src="img/10.jpg">
+        </div>
+        <div>
+            Çalışma ortamımız.
+        </div>
+        <div>
+            Son olarakta EKG sinyalimizi güçlendirip osiloskop ekranında çıkış aldık. Osiloskop yerine grafik ekran
+            tercih edecek olursak sinyalimzi AD converterdan geçirmemiz gerekir. Bu işlem için bir kaç satır kod yazmak
+            ve pic16F877 kullanmak yeterli olacaktır. Bu çalışma profesyonel olarak yapılmamışsa da gerçek sinyale çok
+            yakın bir sinyal elde etmiş olduk. Profesyonel EKG cihazlarındaki işleyiş temel olarak yukarıdaki gibidir
+            fakat daha kompleks ve güçlü katmanlardan oluştuğu için daha kesin sonuçlar elde edilir.
+        </div>
+        <div>
+            <h5>EKG cihazımızın doğruluğunun ölçülmesi</h5>
+            <div>
+                <img src="img/11.jpg">
+            </div>
+            Hastane ortamında alınan sonuçlar ile bizim elde ettiğimiz işaretlerin karşılaştırıldığı yukarıda resimde,
+            üstteki resim profesyonel cihazlar ile alınmış bir sonuçtur. Alttaki resim bizim bir avuç malemeden yapmaya
+            çalıştığımız EKG cihazımızın sonucudur. Yukarıdaki resimleri kıyaslamak ve sonuçları değerlendirmek sizlerin
+            hakkıdır.
+        </div>
+    </div>
+</body>
+
+</html>
