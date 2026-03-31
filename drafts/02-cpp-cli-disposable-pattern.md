@@ -198,4 +198,4 @@ Don't ship a C++/CLI wrapper without the finalizer. I've seen what happens when 
 
 ---
 
-*I'm Burak Hamuryen, a Senior Software Engineer in Berlin with 14+ years of experience. I've worked on systems handling 10K+ Kubernetes pods, 5,000+ camera streams, and $100M+ daily transactions. More at [hamuryen.com](https://hamuryen.com).*
+*I'm Burak Hamuryen, a Senior Software Engineer in Berlin with 14+ years of experience. I've worked on systems handling 10K+ Kubernetes pods, 5,000+ camera streams, and government-scale platforms serving 1.5M+ users. More at [hamuryen.com](https://hamuryen.com).*
