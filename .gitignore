@@ -2,3 +2,6 @@
 firebase.json
 .firebase/
 public/
+.claude/
+blog-ideas.md
+linkedin-optimization.md

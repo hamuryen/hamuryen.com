@@ -1,173 +1,854 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-    <title>Burak Hamuryen</title>
-    <meta name="description" content="Burak Hamuryen personal website" />
-    <meta name="robots" content="noindex, follow" />
-    <meta name="referrer" content="always" />
-    <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            font-family: Cinzel;
-            box-sizing: border-box;
-            color: rgb(160, 160, 160);
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Burak Hamuryen - Senior Software Engineer</title>
+  <meta name="description" content="Burak Hamuryen — Senior Software Engineer based in Berlin with 14+ years of experience. Distributed systems, real-time video & live streaming, big data, cloud-native (Kubernetes, GCloud, AWS), AI/ML, Java, Kotlin, Python, Go." />
+  <meta name="keywords" content="Burak Hamuryen, software engineer, Berlin, distributed systems, Kubernetes, real-time video, live streaming, big data, microservices, Java, Kotlin, Python, Go, GStreamer, DeepStream, Spring Boot, Kafka, cloud-native, AI, machine learning, full-stack developer" />
+  <meta name="author" content="Burak Hamuryen" />
+  <meta name="robots" content="index, follow" />
+  <meta name="referrer" content="origin-when-cross-origin" />
+  <link rel="canonical" href="https://hamuryen.com" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-        body {
-            background-image: url("images/bg.jpg");
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
+  <!-- Open Graph -->
+  <meta property="og:title" content="Burak Hamuryen - Senior Software Engineer" />
+  <meta property="og:description" content="Senior Software Engineer in Berlin. 14+ years building distributed systems, big data pipelines, real-time streaming, and cloud-native platforms with Java, Kotlin, Python, Go." />
+  <meta property="og:url" content="https://hamuryen.com" />
+  <meta property="og:image" content="https://hamuryen.com/og.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
 
-        body,
-        html {
-            height: 98%;
-            width: 99%;
-        }
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://hamuryen.com/og.png" />
+  <meta name="twitter:title" content="Burak Hamuryen - Senior Software Engineer" />
+  <meta name="twitter:description" content="Senior Software Engineer in Berlin. 14+ years building distributed systems, big data pipelines, real-time streaming, and cloud-native platforms with Java, Kotlin, Python, Go." />
 
-        h1 {
-            font-size: 70px;
-            line-height: 70%;
-        }
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Burak Hamuryen",
+    "url": "https://hamuryen.com",
+    "jobTitle": "Senior Software Engineer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" },
+    "sameAs": [
+      "https://github.com/hamuryen",
+      "https://www.linkedin.com/in/hamuryen"
+    ],
+    "knowsAbout": ["Distributed Systems", "Real-Time Video Processing", "Live Streaming", "Big Data Pipelines", "Cloud-Native Architecture", "Kubernetes", "Google Cloud", "Microservices", "Java", "Kotlin", "Python", "Go", "Spring Boot", "Kafka", "GStreamer", "NVIDIA DeepStream", "AI/ML", "Full-Stack Development", "IoT", "System Design"],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Hacettepe University" },
+      { "@type": "CollegeOrUniversity", "name": "Nigde University" }
+    ],
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Patent: Video Network Gateway System",
+      "credentialCategory": "patent"
+    }
+  }
+  </script>
 
-        li {
-            font-size: 35px;
-            line-height: 80%;
-        }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 
-        .left {
-            float: left;
-            width: 5%;
-            height: 90%;
-            position: relative;
-        }
+  <!-- Theme init (prevent FOUC) -->
+  <script>
+    (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);else if(!window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.setAttribute('data-theme','light');})();
+  </script>
 
-        .main {
-            float: left;
-            width: 75%;
-            height: 90%;
-            position: relative;
-        }
+  <!-- GTM -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WL2ZMQT');
+  </script>
 
-        .right {
-            float: left;
-            width: 20%;
-            height: 90%;
-            position: relative;
-        }
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        font @media only screen and (max-width:620px) {
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #1a1a2e;
+      --text-secondary: #555770;
+      --text-tertiary: #8888a0;
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+      --border: #e2e2ee;
+      --glow: rgba(99, 102, 241, 0.06);
+      --tag-bg: rgba(99, 102, 241, 0.08);
+      --tag-text: #4f46e5;
+      --shadow: 0 1px 3px rgba(0,0,0,0.04);
+      --transition: 0.3s ease;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+    }
 
-            .menu,
-            .main,
-            .right {
-                width: 100%;
-            }
+    [data-theme="dark"] {
+      --bg: #0a0a0f;
+      --surface: #14141d;
+      --text: #e2e2f0;
+      --text-secondary: #9494aa;
+      --text-tertiary: #5e5e74;
+      --accent: #818cf8;
+      --accent-hover: #a5b4fc;
+      --border: #1e1e2e;
+      --glow: rgba(129, 140, 248, 0.04);
+      --tag-bg: rgba(129, 140, 248, 0.1);
+      --tag-text: #a5b4fc;
+      --shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
 
-        }
+    html { scroll-behavior: smooth; }
 
-        div.name {
-            position: sticky;
-            width: 98%;
-            height: 30%;
-            padding: 10% 0;
-        }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
+      transition: background var(--transition), color var(--transition);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-        div.info {
-            position: absolute;
-            width: 98%;
-            height: 40%;
-            top: 30%;
-            padding: 10% 0;
-        }
+    /* Cursor glow */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), var(--glow), transparent 40%);
+      pointer-events: none;
+      z-index: 0;
+      will-change: background;
+    }
 
-        div.post {
-            position: absolute;
-            width: 98%;
-            height: 20%;
-            top: 60%;
-            padding: 10% 0;
-        }
+    a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--accent-hover); }
 
-        div.social {
-            position: absolute;
-            width: 98%;
-            bottom: 10px;
-        }
+    ::selection { background: var(--accent); color: #fff; }
 
-        div.bottom {
-            position: fixed;
-            width: 100%;
-            bottom: 10px;
-        }
-    </style>
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text-tertiary); }
 
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WL2ZMQT');
-    </script>
+    /* Layout */
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 5rem;
+      padding: 0 2rem;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      width: 42%;
+      max-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 6rem 0;
+    }
+
+    .content {
+      width: 58%;
+      padding: 6rem 0;
+    }
+
+    /* Sidebar */
+    .hero-name {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 2rem + 2.5vw, 3.5rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-bio {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      max-width: 340px;
+      line-height: 1.7;
+    }
+
+    /* Navigation */
+    .nav { margin-top: 3.5rem; }
+    .nav a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 0;
+      color: var(--text-tertiary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color var(--transition);
+    }
+    .nav a::before {
+      content: '';
+      display: block;
+      width: 2rem;
+      height: 1px;
+      background: var(--text-tertiary);
+      transition: width var(--transition), background var(--transition);
+    }
+    .nav a:hover, .nav a.active {
+      color: var(--text);
+    }
+    .nav a:hover::before, .nav a.active::before {
+      width: 4rem;
+      background: var(--text);
+    }
+
+    /* Sidebar footer */
+    .sidebar-footer { margin-top: auto; }
+
+    .social-links {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+    }
+    .social-links a {
+      color: var(--text-tertiary);
+      transition: color var(--transition), transform var(--transition);
+    }
+    .social-links a:hover {
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+    .social-links svg { width: 22px; height: 22px; fill: currentColor; stroke: none; }
+    .social-links a[aria-label="Blog"] svg { fill: none; stroke: currentColor; }
+
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .theme-toggle button {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.5rem;
+      cursor: pointer;
+      color: var(--text-tertiary);
+      transition: color var(--transition), border-color var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .theme-toggle button:hover { color: var(--text); border-color: var(--text-tertiary); }
+    .theme-toggle button.active { color: var(--accent); border-color: var(--accent); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+
+    /* Sections */
+    section { margin-bottom: 6rem; }
+    section:last-child { margin-bottom: 0; }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 2.5rem;
+      display: none;
+    }
+
+    /* About */
+    .about p {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .about p:last-child { margin-bottom: 0; }
+    .about strong { color: var(--text); font-weight: 600; }
+
+    /* Experience cards */
+    .experience-list { display: flex; flex-direction: column; gap: 1rem; }
+
+    .exp-card {
+      display: flex;
+      gap: 1.5rem;
+      padding: 1.25rem 1.5rem;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      transition: background var(--transition), border-color var(--transition), transform var(--transition);
+    }
+    .exp-card:hover {
+      background: var(--surface);
+      border-color: var(--border);
+      transform: translateX(4px);
+    }
+
+    .exp-date {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+      padding-top: 0.2rem;
+      min-width: 90px;
+      letter-spacing: 0.02em;
+    }
+
+    .exp-info { flex: 1; }
+    .exp-role {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+    .exp-desc {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      line-height: 1.65;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .skill-group {
+      padding: 1.25rem;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .skill-group:hover {
+      background: var(--surface);
+      border-color: var(--border);
+    }
+
+    .skill-group h3 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 1rem;
+    }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .exp-info .tags { margin-top: 0.75rem; }
+    .tag {
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      transition: background var(--transition), color var(--transition);
+      white-space: nowrap;
+    }
+    .tag:hover { background: var(--accent); color: #fff; }
+
+    /* Stats */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin-top: 3rem;
+    }
+    .stat {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-radius: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .stat:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .stat-number {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 1.5rem + 1.5vw, 2.5rem);
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-tertiary);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+      text-align: center;
+    }
+
+    /* Animations */
+    .animate-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .animate-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .stagger > .animate-in:nth-child(1) { transition-delay: 0ms; }
+    .stagger > .animate-in:nth-child(2) { transition-delay: 80ms; }
+    .stagger > .animate-in:nth-child(3) { transition-delay: 160ms; }
+    .stagger > .animate-in:nth-child(4) { transition-delay: 240ms; }
+    .stagger > .animate-in:nth-child(5) { transition-delay: 320ms; }
+    .stagger > .animate-in:nth-child(6) { transition-delay: 400ms; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 1.5rem;
+      }
+      .sidebar {
+        position: static;
+        width: 100%;
+        max-height: none;
+        padding: 3rem 0 0;
+      }
+      .content {
+        width: 100%;
+        padding: 3rem 0;
+      }
+      .nav { display: none; }
+      .section-label { display: block; }
+      .skills-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .stats { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+      .stat { padding: 1rem 0.5rem; }
+      .exp-card { flex-direction: column; gap: 0.5rem; }
+      .exp-date { min-width: auto; }
+    }
+
+  </style>
 </head>
+<body>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL2ZMQT" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
 
-<body style="height:100%">
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL2ZMQT" height="0" width="0"
-            style="display:none;visibility:hidden">
-        </iframe>
-    </noscript>
-
-    <div style="height:100%">
-        <div class="left">
-            <br>
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <header class="sidebar">
+      <div>
+        <h1 class="hero-name">Burak Hamuryen</h1>
+        <p class="hero-title">Senior Software Engineer</p>
+        <p class="hero-bio">
+          I architect and ship high-performance distributed systems, cloud-native platforms, and scalable products across government, enterprise, and startup domains. Based in Berlin.
+        </p>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#about" class="active">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+        </nav>
+      </div>
+      <div class="sidebar-footer">
+        <div class="social-links">
+          <a href="https://github.com/hamuryen" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/hamuryen" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://post.hamuryen.com/" target="_blank" rel="noopener noreferrer" aria-label="Blog">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </a>
+          <a href="mailto:burak@hamuryen.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+          </a>
         </div>
-        <div class="main">
-            <div style="padding:15px;text-align:left;">
-                <div class="name">
-                    <h1>Burak Hamuryen</h1>
-                </div>
-                <div class="info">
-                    <ul style="list-style-type:none">
-                        <li>Senior R&D engineer</li>
-                        <li>Traveler</li>
-                        <li>Amateur photographer</li>
-                    </ul>
-                </div>
-                <div class="post">
-                    <ul style="list-style-type:none; font-size: 50px;">
-                        <li>
-                            <a href="https://post.hamuryen.com/"> Posts - Yazılar</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="social">
-                    <a href="https://www.linkedin.com/in/hamuryen"><img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB8UlEQVRoge3av0sbYRgH8HcyDuLiLMHFwf/AoSjdMnSrg1sHV0FbKN4JIQl00ULqbcUYRUEpFBzu0kRqTl00IEmotGk5wQ4pSRYhOUTz4+6+rrG+KWlq+74vfR94pnt4+H7ueDkOjpBn6/1EMTSi6lWymIAQrRo2UQyNBDQfIYqhMQ/UayuGRoS68/eehF4lzEP8aTMPIAGsA0gA6wD/EvB4LYOzig3X8/CpbGMidiIOYOT1AW5aLtrruunAv2yKAXiRLIBW84mCGIDnH+iAOVEA/mUT103nTvirhoPhpbQYALKYwETsBPlSDY7rIVeq4dGqQIeY2+52cDKWQSht3evJWKbrmcHIHp5snWI+UUBw38LL1Fc83c5i6NXHvw8IpS3qIQ6lra5mZnbPcNVwqNcbjos3x9/RF0zyCXj/uQzX86jX2mu3UOETUP/pBfirmtrJ8Qf4nTq8uBQb4LgeBsIp/gB2vYV4toiIeY6NXLHjgQaA8bfHfAHseguj0cM7+8ZWjjoipt/l+QLEs0Xqzs38D+r8rP6FL0DYtKg7wyZ9fmHvG1+A9pludgb36fPCADrNS4AESIAESIAE/L+Ah/io72XngwG4beYBJIB1AAlgHUACVMNmHqLXVvWq6D97RAkJaD7xfrfRq0QxoiSg+W4BSsiqQOgoprQAAAAASUVORK5CYII=" /></a>
-                    <a href="https://github.com/hamuryen"><img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAG7ElEQVRogcVZa6hc1RXeefmIVmNjIlqtSVVaFMQWX4iWSkMNSsFHGq1YxEeNiS8MPkClDmpTg0oK0tLEauoDC+dPG5qMd8rEk3Pm7L2+tfa2WKto0iCIP2xJb24eisk13umPmTOz58y5c2funTt3wf5zzn58397fXnvttZXqg5VKejGR3AjIBsM8RCS7wXaYIKMEGQXbYSLZTSxvAbKBSFbGcbyoH2NP2iqV904CZA3AYHHVXgtBxsBMRLI6DMMFAwNeLpdPAeQ5gA9OBnheAdsDxHZ9qaQXTxvwQqEwl4jXgu2BDkCGiewOwP7BAE8R8SNE/IgBngJkI5HdAea9HdrvN5AHgiCY01fwURQtNWQlVwpsdxLx48aY71er1VkT9VWtVmfHRD8gkifAsiu3T7IchrSkL+AT4GqC25cdxLCUkwRXTrV/Y+THYH67fTV4rzGyfEqdE/GtYPtVS8fgfxvDV00VeNa05mvA9uOMpL4C5JZJdUjEtxJkLOM5NgVBcGyfsTfMOTcfkFfavFWvJBLgan/mwfaIMXyHYfswIBs15LahoaFv9gt4HMeLiOSXxPySgTxkmFeB7RGPxGjXqx5F0VJf87XG7togCI7yXSeRHCLIpu1anzlZ4FEULQXkFYIc9l2qc24ekVzfOom8d8KxCoXCXN/bEGTMMP9cKaWShC8cx/V9ScQFY/g6QNYB9q+AvAe2/wHbAwAfbJzEZHcQ8+81cBOxfYZIDuX1mSR8oVJKaeAXvozBTB1dLDE/mHGRT6b/jOHr+nVwTVjY/ayJyT7T6mL5vlzw5XL5FP+QAvPb1Wp19kwQSFddKaWCIJgD5ripCrcvN44C5DlfFlrrs/z/xpiLB0Ugce5yf+wkSb7r7xNi+2wL+Fpg5m9Q/nWW4ObNm48hyOh0gyfIaKlUOq5d3na9N8EHWgJAQNY0foIP5rlIIl47qBVom2FVd7WQLzyZrfIINENiIvtitrHW+qzxPMZ0FLA9Esc4t30S5XceTq2Uql1GWvRXd2G+AbJxUOCbSrAvZ3FUiC7xpDZWLpcXKiK50WP+cbZRtVqd3SkEnr5V4L2+F0zNkHyS1tHACgXIBk97f2zXHs4dNPi0OOe+1yYjyGYP7wvKMA+lHwxwextjI8tnigARLWvfB3ynJ7Ntikh2NwgYc1l7A/npTBHIuw8kCV/RlJnsUmA7nH6I4/jUdgK0bKYIJAlfkcWzfbv5VmOFIHuUfzjlHSBxjPNnikA2GlBKqS1btnzDI3C4hUDeri+VSscR5OtBgwfbLwuFwtwsniAI5rQQ8CXknJufbaCUUmB5d9AEiOyOPCxBGB7fKiFvE4dheHpeIyIuDJ6A3J+HxTn37UYdtjsVsbyVfshGgamFYXi6Hw1OdzGQkWKxeEIeFq3lh02Z8dbWg4z47rxGSikFyLqBEfADtYwZ5nubEsLzikhWNhu6P43X0Dk3Ly9/0++SFwP5RiSvp3U1cEMts1y/dxLbzzpl15xz88H8l2nRPORrA/wmzxOmVo/L/luvP9YI+8FMjX1QPzyq1eqs8XJAxvDN46UFJwMczFvzouCsVYh+1FwprvjLstpbwtdqpOyr9Y3yTyK5Pmc2ZiUJrgTkt2B23d4XiOQQWD4A7JtEsjqKojMmAt7AyfJGE+c7dzV+hGG4IL3QE+RwFEVnOOdOBOyfvQ2+tlPnzrl5hsVMqHFmcs7N6xZ0atu1PjPNE4HtfufciRl2zTsnMb/U+A7ZVG90JElw6XgDaMht3W9UWdMrAT/lCMi6tgqlkl4MtvtTXWqtL1JKqSAIjjJs36+T+DSKcE7uAMylrgkwx72ArxBdkjoaAxlxzp2cW9FAHvC0+mG6if2Quv4I8Sut9QV/T5LTtNYXEfGjvbzYENy+bsEHQXCsgf0obWtg7+lUeQ6R5aaU5A2lahvWkP1XP91mtwR8v09kdSc3q5RSKgxpiYGMeG7uaaVqYbX/fRAE/BgMbIe79ljGyHI/M0zEBaWUCo052zD/LftuMB0EiO1j3iSO5l0vOxogt7RkhmFfLhaLRyuV5vNpmQZWaI2fVCqV7/SLQO0x0b7ogR8zhm/uCXyGROPCQ2T/kSTJeXl1+0EgDGkJkU38mZ80+NSM4av8vBBBRont+uzj9FQIFIvFow3bhwnyedOB2P/1LJvxrHYKNuOlmjuTkRqR2nPoZAgEYXg8kdzvJ6tSb9NLiNGV1Vws35cedr5Gs+S6KYB9LXt2GMiIgb1nQlc5FYvjeBGxfbbTi33PZNjuB2TduCfsdFgYhgsM8yoiqyfjVmvPp1wB3rmrLTAbtJXL5YUaWEFsXwDsNrDsIsgeghyulz3EdieYtxLwvAZuKJfLC/sx9v8B+yJP8N5ST7MAAAAASUVORK5CYII=" /></a>
-                    <a href="https://twitter.com/hamuryen"><img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEIklEQVRoge2ZXWgcVRTHRxOxWCOVoEilLxpBRUHaNwMlJBKJqUnmnrtWIhQFKRZEaEVKQWVFKGKk2uqDoaY1punOPSdIRSuEVosYLMWq1K9GogZi0iRzz0njRynUpuPDtukmuzvZTWYzPuwfzssOM+f3P+feu3fuOE5ZZZUVi1pTY2sU+hu14e3ayEuAvKU1Nfmgkwwq42YLFRj/ETAykOibCnKFRmZteGfd/uFV+Z7RemD8XjCTD2ddUOhvLBV4An+6EUhMPvD5ASTjLnL97AOSQWWb5zdp4kNAfKGlx6+Zk8BFrk/0TQWuJ09FDV/bNVilSE4UCn/VBF/QhncCiQFiyfh9d1YSTbL38sWLCm17lAYU8kfFwucdYsRf1yWPrcg2gHI6w+EMIG+JAt717ONRwSuSEw3do9V1yWMrwHCb8uzTs4mA5HyOFu7e3BlctxQDCuXnSOBRRoBklyY+qlHOAdnfG7pHq2cTaeRLOcehkeNZE6ZAJXB6XVTVn79Sud6Ze+ZWiqzNf4Oc04a3F9sNMHZrCeAnE+g/kJVMEx9duI32V4W2PYFBRUEGiN+JEh6M/NDcO31H7mRotxVeBfubIvt8077xW8IMaOJ9kXYAh2/Lm6yhe7QaSP4psp3/apJ+QH7W9Sbuc4LgmjkGjH0zSgMLFcxRxDuW1GKSP8HIABC/rw2/qokPRWmgsePUylADCQwqCpkLcQQQz8zv8KxquwarXLSvtKRGVtd2DVaB4c/jBp4fCmUsf+mTQSUQX9TIl4Dsd5okBSR/xw09pwPGfhE6fDTJj3FDLtCBznADRt6IGzI0kJ8MNfDowTN3A/FM7KB5YkOvf1eogcvDaG/coLkCiIcWhHec9GqUua3+vwQQv1aQAce58rItv8QNPSdybd7CVLd/eBWQ7YkdvG8qACMDRcFnSnl2rUJ5D0jG4zPgP1Y0uOvxJjByWCF/qMh+qZHPxjT2v3ec4NqiDbSkRlbnesVc7lBom4uGvyJtbDJm+E8WDe84juMkg0qF/FksBmhqekP3H7cvzYCTPk3TJP3LbcD17BNLhr9qIqgAtC9olL+WBR75rcjgM9XeO30zGH5Ok/QrlIlS7Js0yafLcjqtjL9eoYxECQ9GjuQ8MoxSjR9M3KpJ3s13CLb4ytuP13WevKFk4G3e5J1AsqvYU4uCKk/Ssag/qzA17Rm6SRl/vSJ+UZF8FXXF0+DWdz1WS4YFM/kQGDmiyX6rUU5rZC7lKpN+75aDC57xFKParsEqQHkZiKdKCk/Srzy7NjLw+WrsOLUSjH0mQXwywoqfVchvtx6YuL9k4LnU0uPXANptYORw5uedAibleTD8jYvyeluKG2r2DF2/rOD51JoaW+Mi16e32nZreoLzjvS5KG9SaJvT3xEiXlHKKqusUP0HiO6cEiMvH70AAAAASUVORK5CYII=" /></a>
-                    <a href="https://www.instagram.com/hamuryen"><img
-                            src="data:image/png;base64,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" /></a>
-                    <a href="https://www.flickr.com/hamuryen"><img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADOUlEQVRoge2Y3UsUURjGH9M+zEIIi7ASIqoLw5A1cWYWErIggi6CvSzKaj6Kvi66EaKCCEwUUufMbv0BpUZERPRFRkQQhCRB7s7oVUSBGBpr5c5ZTxfrtrvm5u7O8UI4D7y37/t7znnfM+cMICQkJCQkJLQYFHhbiuaBShwbWAuwJQtR4ltNW9nPXe2b2K4b6xngtQYrgh5WoDu3YTgjRaeGWTKgOVEYzkuokdM4+Ga1lyqx+q462mCZVLZGpv1BlgwqW79dxXodl8xzrClUnl/Wo5+2Qou8SIfOFjDsMRjDKsCK8inBfKEqqpgP06GzBZXJeFwmZ3LbFdU+AM2J5gKfYUR3etDYvyIXeFciu6lCxnKBzzCimA+/1bSVZc+s2XuhO26+8Gmt9QABVvx/eFOmMvmVL/xfExJ5ztC77N/MRz5sgGGPFQqf2gn7UjZ45gtVUMn6Wih8MlyFtP2b3XDueoVPzIQTg/pxy1wGqGzd8gqfaCUrHqvv3JnK3BzezgM+bR5uz7H6VVQmlIeBaX+QUT/pTWXX7WtcDWhOFOr7lekG4gpp4QWf2AUSm6juWDPTPvY7ngYSJiJ7MoeXvOJpYNofZLTBPASAFcGwJ7kbMJzzGf1fwLE5X8Rl6zIQ6F/FG37GwPW//Y/GEt7w0/4gozIhgDpSvmgNKKYFBFgxDCfG3YBun808QskobwOuRK4mvwED/A0MNWYYkMjzBRpiAIZznXP7/Jh9L4or5CLf/rfc1DF6cmgb5/YJzv6QTda2VlKFxDga6MusoDs9nFZ/CicGN882MDMHhM/wzr5KAMnL3HfvBiItc8EDwER1xxqqkC+eh1e2WueuYNhNXk4k6JH78z03Y1JnPZXMqIfWecJ8oaXZK6hD+2DY4wXA38H+x8v/B5+U29ClFHKsUtm693njhdL5K5wY3AzDfpRjz49CCx/P90k5WdtaSWWrLzdwMkpl8yTLswaghetgON3QIhHodjwFbY/DcJ5CtzWvj/qpups7XLm73VWsj+nXbSqZUapYz5ifqKz6yiovNRIK9C7D4cF1UEfK813tXMXQWMJ8oQrmC1Vw+K0iJCQkJCQkJCQktMD6A7XsAbzEiTuMAAAAAElFTkSuQmCC" /></a>
-                </div>
+        <div class="theme-toggle">
+          <button id="theme-light" aria-label="Light theme" title="Light theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+          <button id="theme-dark" aria-label="Dark theme" title="Dark theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          </button>
+          <button id="theme-system" aria-label="System theme" title="System theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+      <!-- About -->
+      <section id="about" class="about">
+        <h2 class="section-label">About</h2>
+        <div class="animate-in">
+          <p>
+            I'm a software engineer with <strong>14+ years of experience</strong> delivering
+            high-performance production systems across <strong>government</strong>, <strong>private sector</strong>,
+            <strong>defense</strong>, and <strong>industrial</strong> domains. I specialize in <strong>distributed
+            architectures</strong>, <strong>real-time video &amp; live streaming</strong>,
+            <strong>big data pipelines</strong>, and <strong>cloud-native platforms</strong>.
+          </p>
+        </div>
+        <div class="animate-in">
+          <p>
+            I've worked on AI video analytics infrastructure running <strong>~10,000 Kubernetes pods on
+            Google Cloud across multiple continents</strong>, built a government-scale auction platform
+            serving <strong>1.5M+ users</strong> processing <strong>~$100M+ daily</strong>, and rescued
+            critical legacy systems by redesigning them into modern microservice architectures. My work spans
+            real-time data acquisition, industrial machine-software integrations, simulation systems, data
+            visualization, and monitoring dashboards.
+          </p>
+        </div>
+        <div class="animate-in">
+          <p>
+            From <strong>high-scale Spring Boot microservices</strong> and <strong>Kotlin</strong> backends
+            on <strong>Kubernetes</strong> to <strong>real-time video streaming</strong> pipelines &mdash;
+            I work across the entire stack wherever the problem needs to be solved.
+          </p>
+        </div>
+        <div class="animate-in">
+          <p>
+            Currently based in <strong>Berlin</strong>, I hold a Master's degree in Informatics, a
+            Bachelor's in Electrical &amp; Electronics Engineering, and a <strong>patent in video
+            network gateway systems</strong>. Outside of work, I build my own
+            products &mdash; I own and operate <a href="https://esertescil.com" target="_blank" rel="noopener noreferrer"><strong>EserTescil</strong></a>
+            (IP protection platform with legal timestamp certificates),
+            <strong>OnlyCampus</strong> (campus life platform),
+            <strong>MindMate</strong> (mental health app), and
+            <strong>Velox</strong> (precision GPS speedometer for iOS),
+            with a few more in the pipeline.
+            I also travel and shoot photography.
+          </p>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience">
+        <h2 class="section-label">Experience</h2>
+        <div class="experience-list stagger">
+          <div class="exp-card animate-in">
+            <div class="exp-date">2022 &mdash; Now</div>
+            <div class="exp-info">
+              <div class="exp-role">Senior R&D Engineer &middot; intenseye</div>
+              <div class="exp-desc">Part of a small core engineering team at a Series B-funded ($64M) AI workplace safety platform serving Fortune 500 companies across 25+ countries. Contributing across multiple languages and services in a polyglot stack — backend, AI pipelines, and infrastructure. Working across ~10,000 Kubernetes pods on Google Cloud, on-prem K3s deployments, and NVIDIA Orin edge devices shipped to customers. Industrial integrations enable real-time production line halts when safety threats are detected.</div>
+              <div class="tags">
+                <span class="tag">Go</span>
+                <span class="tag">Kotlin</span>
+                <span class="tag">Scala</span>
+                <span class="tag">Python</span>
+                <span class="tag">GCloud</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">DeepStream</span>
+                <span class="tag">Temporal</span>
+              </div>
             </div>
+          </div>
+          <div class="exp-card animate-in">
+            <div class="exp-date">2020 &mdash; 2022</div>
+            <div class="exp-info">
+              <div class="exp-role">Lead Software Architect &middot; iSIM Platform</div>
+              <div class="exp-desc">Led the architecture of a hybrid on-prem/cloud security platform deployed across ~50 locations, streaming 5,000+ cameras from multiple VMS vendors into a unified monitoring system. Built a custom RTSP-to-WebRTC bridge by compiling Chrome engine with custom API methods, enabling real-time 4x4 multi-camera grid rendering in the browser. The platform handled live viewing, video recording, and traffic violation operations from a central command center.</div>
+              <div class="tags">
+                <span class="tag">C++</span>
+                <span class="tag">Go</span>
+                <span class="tag">WebRTC</span>
+                <span class="tag">RTSP</span>
+                <span class="tag">Spring</span>
+                <span class="tag">Kafka</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-card animate-in">
+            <div class="exp-date">2020</div>
+            <div class="exp-info">
+              <div class="exp-role">Freelance &middot; Ministry of Trade (Turkey)</div>
+              <div class="exp-desc">Designed and built the national e-Auction platform: 1.5M+ registered users, ~$100M+ daily transaction volume, real-time bidding engine processing 1,000+ concurrent bids with live balance checks. Integrated with 4 major banks, e-Devlet, MERSIS, and MERNIS.</div>
+              <div class="tags">
+                <span class="tag">.NET Core</span>
+                <span class="tag">Microservices</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Real-Time Bidding</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-card animate-in">
+            <div class="exp-date">2016 &mdash; 2020</div>
+            <div class="exp-info">
+              <div class="exp-role">R&D Engineer &middot; Proline Integrated Intelligence</div>
+              <div class="exp-desc">Joined during a challenging phase of a long-running government project with critical stability issues. Resolved memory leaks and stabilized the system within one week, then redesigned the entire platform from scratch with microservice architecture and REST APIs in under a year. Scaled to 60+ services on K8s. Built centralized city management platform for an international deployment. Served as Scrum Master driving microservice adoption company-wide.</div>
+              <div class="tags">
+                <span class="tag">C++</span>
+                <span class="tag">.NET Core</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">FFmpeg</span>
+                <span class="tag">ZeroMQ</span>
+                <span class="tag">Kafka</span>
+                <span class="tag">Docker</span>
+                <span class="tag">K8s</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-card animate-in">
+            <div class="exp-date">2012 &mdash; 2016</div>
+            <div class="exp-info">
+              <div class="exp-role">R&D Engineer &middot; InfoDif &amp; Ekin Technology</div>
+              <div class="exp-desc">Developed defense-grade surveillance systems: real-time radar projection overlays synchronized with PTZ cameras for automated target tracking, threat detection, and early warning. Built a high-performance native VMS and viewer in C++/Qt handling 120+ simultaneous live streams with video recording and analytics. Solved P2P NAT traversal for remote video transmission in civilian security deployments.</div>
+              <div class="tags">
+                <span class="tag">C++</span>
+                <span class="tag">Qt</span>
+                <span class="tag">FFmpeg</span>
+                <span class="tag">live555</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="right">
-        </div>
-    </div>
-    <div class="bottom" style="text-align:center;padding:10px;margin-top:7px;"><br><br>&copy;2018 <a
-            href="https://hamuryen.com">Burak Hamuryen</a></div>
-</body>
+      </section>
 
+      <!-- Skills -->
+      <section id="skills">
+        <h2 class="section-label">Skills</h2>
+        <div class="skills-grid stagger">
+          <div class="skill-group animate-in">
+            <h3>Languages</h3>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">Kotlin</span>
+              <span class="tag">Python</span>
+              <span class="tag">Go</span>
+              <span class="tag">C++</span>
+              <span class="tag">C#</span>
+            </div>
+          </div>
+          <div class="skill-group animate-in">
+            <h3>Backend &amp; Frameworks</h3>
+            <div class="tags">
+              <span class="tag">Spring Ecosystem</span>
+              <span class="tag">ASP.NET Core</span>
+              <span class="tag">FastAPI</span>
+            </div>
+          </div>
+          <div class="skill-group animate-in">
+            <h3>Data &amp; Messaging</h3>
+            <div class="tags">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Redis</span>
+              <span class="tag">Kafka</span>
+              <span class="tag">Pulsar</span>
+              <span class="tag">Elasticsearch</span>
+            </div>
+          </div>
+          <div class="skill-group animate-in">
+            <h3>Cloud &amp; DevOps</h3>
+            <div class="tags">
+              <span class="tag">Kubernetes</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Google Cloud</span>
+              <span class="tag">AWS</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">Prometheus / Grafana</span>
+            </div>
+          </div>
+          <div class="skill-group animate-in">
+            <h3>Video &amp; AI</h3>
+            <div class="tags">
+              <span class="tag">GStreamer</span>
+              <span class="tag">DeepStream</span>
+              <span class="tag">FFmpeg</span>
+              <span class="tag">WebRTC</span>
+              <span class="tag">Computer Vision</span>
+            </div>
+          </div>
+          <div class="skill-group animate-in">
+            <h3>Domains</h3>
+            <div class="tags">
+              <span class="tag">Distributed Systems</span>
+              <span class="tag">Microservices</span>
+              <span class="tag">System Design</span>
+              <span class="tag">Real-Time Processing</span>
+              <span class="tag">IoT &amp; Edge</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats stagger">
+          <div class="stat animate-in">
+            <div class="stat-number">14+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat animate-in">
+            <div class="stat-number">30+</div>
+            <div class="stat-label">Projects Shipped</div>
+          </div>
+          <div class="stat animate-in">
+            <div class="stat-number">6+</div>
+            <div class="stat-label">Languages</div>
+          </div>
+          <div class="stat animate-in">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Countries Worked</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education & Credentials -->
+      <section id="education">
+        <h2 class="section-label">Education</h2>
+        <div class="experience-list stagger">
+          <div class="exp-card animate-in">
+            <div class="exp-date">2020</div>
+            <div class="exp-info">
+              <div class="exp-role">Patent &mdash; Video Network Gateway System</div>
+              <div class="exp-desc">Turkish Patent Office (2020/17235)</div>
+            </div>
+          </div>
+          <div class="exp-card animate-in">
+            <div class="exp-date">2016 &mdash; 2019</div>
+            <div class="exp-info">
+              <div class="exp-role">M.Sc. in Information Systems</div>
+              <div class="exp-desc">Hacettepe University, Ankara</div>
+            </div>
+          </div>
+          <div class="exp-card animate-in">
+            <div class="exp-date">2008 &mdash; 2012</div>
+            <div class="exp-info">
+              <div class="exp-role">B.Sc. in Electrical &amp; Electronics Engineering</div>
+              <div class="exp-desc">Niğde University &mdash; Honours Degree</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer animate-in">
+        &copy; 2026 Burak Hamuryen &mdash; Berlin, Germany
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Theme management
+    (function() {
+      const root = document.documentElement;
+      const btnLight = document.getElementById('theme-light');
+      const btnDark = document.getElementById('theme-dark');
+      const btnSystem = document.getElementById('theme-system');
+
+      function getSystemTheme() {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+
+      function applyTheme(mode) {
+        const theme = mode === 'system' ? getSystemTheme() : mode;
+        root.setAttribute('data-theme', theme);
+        btnLight.classList.toggle('active', mode === 'light');
+        btnDark.classList.toggle('active', mode === 'dark');
+        btnSystem.classList.toggle('active', mode === 'system');
+        btnLight.setAttribute('aria-pressed', mode === 'light');
+        btnDark.setAttribute('aria-pressed', mode === 'dark');
+        btnSystem.setAttribute('aria-pressed', mode === 'system');
+      }
+
+      function setTheme(mode) {
+        if (mode === 'system') {
+          localStorage.removeItem('theme');
+        } else {
+          localStorage.setItem('theme', mode);
+        }
+        applyTheme(mode);
+      }
+
+      btnLight.addEventListener('click', () => setTheme('light'));
+      btnDark.addEventListener('click', () => setTheme('dark'));
+      btnSystem.addEventListener('click', () => setTheme('system'));
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if (!localStorage.getItem('theme')) applyTheme('system');
+      });
+
+      // Init
+      const stored = localStorage.getItem('theme');
+      applyTheme(stored || 'system');
+    })();
+
+    // Cursor glow (throttled)
+    let ticking = false;
+    document.addEventListener('mousemove', (e) => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          document.body.style.setProperty('--mouse-x', e.clientX + 'px');
+          document.body.style.setProperty('--mouse-y', e.clientY + 'px');
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+
+    // Active nav on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav a');
+
+    function updateNav() {
+      const scrollY = window.scrollY + 200;
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+        if (scrollY >= top && scrollY < top + height) {
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+  </script>
+</body>
 </html>

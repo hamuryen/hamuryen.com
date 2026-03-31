@@ -1,31 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>404 HTML Template by Colorlib</title>
-	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet"> 
-	<link type="text/css" rel="stylesheet" href="https://hamuryen.com/css/404.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 - Burak Hamuryen</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #fafafa; --text: #1a1a2e; --text-secondary: #555770;
+      --accent: #6366f1; --accent-hover: #4f46e5;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+    }
+    [data-theme="dark"] {
+      --bg: #0a0a0f; --text: #e2e2f0; --text-secondary: #9494aa;
+      --accent: #818cf8; --accent-hover: #a5b4fc;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { padding: 2rem; }
+    .code {
+      font-family: var(--font-serif);
+      font-size: clamp(5rem, 4rem + 5vw, 8rem);
+      font-weight: 400;
+      line-height: 1;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+    .message {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      max-width: 400px;
+    }
+    a {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 0.75rem 2rem;
+      border: 1px solid var(--accent);
+      border-radius: 100px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    a:hover { background: var(--accent); color: #fff; }
+  </style>
+  <script>
+    (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);else if(!window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.setAttribute('data-theme','light');})();
+  </script>
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-45677435-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-45677435-1');
-</script>
 <body>
-	<div id="notfound">
-		<div class="notfound">
-			<div class="notfound-404">
-				<h1>4<span>0</span>4</h1>
-			</div>
-			<p>The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
-			<a href="http://hamuryen.com">home</a>
-		</div>
-	</div>
+  <main class="container">
+    <h1 class="code">404</h1>
+    <p class="message">This page doesn't exist. It might have been moved or removed.</p>
+    <a href="https://hamuryen.com">Go Home</a>
+  </main>
 </body>
 </html>
