@@ -1,10 +1,10 @@
-# GitHub Will Train AI on Your Copilot Data by April 24. Here's What You Need to Know.
+# GitHub Will Train AI on Your Copilot Data by April 24. Here's How to Stop It.
 
-*232 downvotes on GitHub's own discussion thread. A 30-day opt-out window. And a policy change that affects every developer using Copilot Free, Pro, or Pro+.*
+*A 30-day opt-out window. A policy change that affects every developer using Copilot Free, Pro, or Pro+. And 232 downvotes on GitHub's own discussion thread.*
 
 ---
 
-On March 25, 2026, GitHub quietly updated its Privacy Statement and Terms of Service. Starting April 24, Copilot interaction data from Free, Pro, and Pro+ users will be used to train AI models by default. If you don't opt out before that date, your data is in.
+I found out about this the way most developers did: someone posted it on Hacker News. On March 25, 2026, GitHub quietly updated its Privacy Statement and Terms of Service. Starting April 24, Copilot interaction data from Free, Pro, and Pro+ users will be used to train AI models by default. If you don't opt out before that date, your data is in.
 
 This isn't about your private repository source code sitting on GitHub's servers. GitHub is clear about that: code "at rest" in private repos is not used for training. What changes is everything that flows through Copilot while you work: prompts, code snippets, suggestions you accept or modify, file names, repository structure, comments, and the context around your cursor position.
 
@@ -31,11 +31,12 @@ This is collected while you're actively using Copilot. When you're working in a 
 **Not affected:**
 - Copilot Business users
 - Copilot Enterprise users
-- These are governed by separate Data Protection Agreements that explicitly exclude training
+
+These plans are governed by separate Data Protection Agreements that explicitly exclude training.
 
 If you're paying $39/month for Pro+ and assumed your data was protected the same way enterprise customers' data is, it's not. Enterprise gets a contractual guarantee. You get an opt-out toggle.
 
-## How to Opt Out
+## How to Opt Out of GitHub Copilot AI Training
 
 Takes 30 seconds:
 
@@ -69,17 +70,21 @@ The EU AI Act adds another layer. It includes provisions on training data transp
 
 No legal challenge has been filed yet, but the conditions are there. A European developer or company whose proprietary code was used for Copilot training without explicit consent would have a reasonable case under GDPR Article 6.
 
+I'm based in Berlin. Every private repository I work on contains code owned by EU-based entities. The idea that this code could flow into AI training under an opt-out model, when GDPR was designed to prevent exactly this kind of default data collection, is hard to square. I opted out immediately, but the fact that I had to opt out rather than opt in is the problem.
+
+For companies with EU employees using Copilot Free or Pro, this is worth raising with your legal or compliance team. The policy change may not align with your existing data processing agreements, especially if developers are working on client code covered by NDAs or separate data protection terms.
+
 ## What I'm Doing
 
-I've opted out. The setting change takes 30 seconds and there's no downside. Copilot works exactly the same way after opting out, you just stop contributing to the training pool.
+I've opted out. The setting change takes 30 seconds and there's no downside. Copilot works exactly the same way after opting out. You just stop contributing to the training pool.
 
 Beyond that:
 
 **Auditing what flows through Copilot.** I'm more conscious now about what context Copilot sees. If I'm working on security-sensitive code (auth, encryption, API keys in config), I consider whether I want that flowing through any external service, regardless of training policies.
 
-**Evaluating alternatives for sensitive projects.** For proprietary work, tools like [Tabnine](https://www.tabnine.com/) (which never stores or trains on your code and offers self-hosting) or [Continue](https://continue.dev/) (open-source, bring your own model) provide similar functionality without the data collection question. [Claude Code](https://claude.ai/code) is my primary tool and Anthropic's privacy policy is more straightforward: they don't train on your data in the API/CLI context.
+**Evaluating alternatives for sensitive projects.** For proprietary work, tools like [Tabnine](https://www.tabnine.com/) (never stores or trains on your code, offers self-hosting) or [Continue](https://continue.dev/) (open-source, bring your own model) provide similar functionality without the data collection question.
 
-**Not panicking.** GitHub isn't stealing your source code. They're collecting fragments that flow through Copilot during active use. If you opt out, the collection stops. If you don't use Copilot, none of this applies to you. The situation is manageable, it just requires you to actually go change a setting.
+This isn't the end of the world. But it does require 30 seconds of your time and a conscious decision about where your code goes.
 
 ## The Bigger Picture
 
