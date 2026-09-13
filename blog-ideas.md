@@ -127,22 +127,7 @@ When I needed to integrate with Turkey's e-Archive (electronic invoice) system, 
 
 ---
 
-## Tier 4 — Side Projects & Personal
-
-### 16. Building an IP Protection Platform: EserTescil Architecture
-How I built esertescil.com — a SaaS platform that lets creators protect their intellectual property using legally recognized timestamp certificates under Turkish law (Law No. 5070). The architecture: ASP.NET Core backend, React Native mobile app, file hashing without storing originals, integration with BTK-authorized timestamp authorities. From idea to revenue-generating product.
-
-**Keywords:** SaaS, ASP.NET Core, React Native, legal tech, entrepreneurship
-
-### 17. Kalman Filtering for GPS Speed: How Velox Achieves Sub-Second Response
-Smartphone GPS updates at 1Hz — too slow for a real-time speedometer. Velox fuses 1Hz GPS with 10Hz accelerometer data using a Kalman filter to achieve near-instant speed response. This post explains the math, the Swift/CoreLocation/CoreMotion implementation, and the tradeoffs between accuracy and responsiveness.
-
-**Keywords:** Kalman filter, sensor fusion, iOS, Swift, CoreLocation, GPS
-
-### 18. Building a Campus Life Platform From Scratch
-OnlyCampus: a full-stack mobile platform for university students — Spring Boot backend, React Native apps, WebSocket real-time chat, marketplace, roommate matching, push notifications via FCM and SNS, RevenueCat subscriptions, and self-hosted Kubernetes infrastructure on Hetzner.
-
-**Keywords:** Spring Boot, React Native, Kubernetes, full-stack, product development
+## Tier 4 — Personal
 
 ### 19. I Mined Bitcoin in 2012 on an NVIDIA Tesla GPU. Then a Hard Drive Died. ✅
 Personal story. 2012, first job, Dell workstation with NVIDIA Tesla GPU, CUDA face recognition and license plate detection. Coworker introduces Bitcoin at $11. Mining for a few days, $4-5 earned. Left running over weekend. Monday: disk dead. $180 HDD purchase, $7-8 in pool (~0.7 BTC). Rage quit. $180 could have bought ~16 BTC (touched $140K since). Dry humor, self-deprecating, "timing was right, method was wrong."
@@ -155,11 +140,6 @@ Personal story. 2012, first job, Dell workstation with NVIDIA Tesla GPU, CUDA fa
 A career retrospective. Starting with Linux shell scripts out of curiosity in 2008, learning C++ and OOP in 2009, becoming an engineer in 2012, and progressing through defense, smart city, IoT, and AI video analytics.
 
 **Keywords:** career, retrospective, software engineering
-
-### 20. Building Side Projects While Working Full-Time
-I run EserTescil, develop OnlyCampus, MindMate, and Velox — all while working full-time as a senior engineer. Time management, knowing when to ship vs. polish, choosing boring tech for side projects.
-
-**Keywords:** side projects, entrepreneurship, productivity
 
 ### 21. From Turkey to Berlin: A Software Engineer's Relocation Story
 Moving from Ankara to Berlin — work permit process, cultural differences in engineering teams, what's different about the German tech scene, and practical tips for engineers considering the move.
@@ -220,8 +200,7 @@ These are NOT blog posts — they are 3-5 paragraph LinkedIn posts to stay visib
 6. "5,000 cameras, 50 locations, one platform. The architecture behind it..."
 7. "The one question I ask before choosing any technology for a new project..."
 8. "From Ankara defense projects to Berlin AI startup — what changed and what didn't..."
-9. "Why I build side projects (EserTescil, OnlyCampus, Velox) while working full-time..."
-10. "The tools I can't live without in 2025: Claude Code, Cursor, and why AI-assisted development is not cheating..."
+9. "The tools I can't live without in 2025: Claude Code, Cursor, and why AI-assisted development is not cheating..."
 
 Post format: Hook (first line grabs attention) → Story (2-3 paragraphs) → Takeaway (what you learned) → Question (drives comments)
 
