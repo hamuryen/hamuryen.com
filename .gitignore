@@ -7,3 +7,18 @@ blog-ideas.md
 linkedin-optimization.md
 linkedin-action-plan.md
 drafts/*.png
+
+# Local planning notes and development artifacts
+content-strategy.md
+profile-evidence.md
+.local/
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/
+.env
+.env.*
+!.env.example
+playwright-report/
+test-results/
+_site/
