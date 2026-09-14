@@ -97,7 +97,13 @@ h2 em{font-style:normal;color:var(--accent)}
 .skip-link{position:fixed;left:12px;top:-100px;z-index:10;background:var(--accent);color:var(--ink);padding:10px}
 .skip-link:focus{top:12px}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
-@media(min-width:1050px){.js .content{height:calc(100vh - 170px);min-height:725px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+@media screen and (min-width:1050px){
+.js body{height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr) auto}
+.js .page-top,.js .workspace,.js .page-footer{width:100%}
+.js .workspace{height:100%;min-height:0;grid-template-rows:minmax(0,1fr)}
+.js .content{position:relative;height:100%;min-height:0}
+.js .profile,.js .navigation{position:relative;top:auto;max-height:100%}
+.js .content,.js .profile,.js .navigation{overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
 }
 @media(max-width:1050px){.workspace{grid-template-columns:70px 285px minmax(0,1fr);gap:12px;padding:0 18px}
 .profile-body{padding:25px 23px 0}
