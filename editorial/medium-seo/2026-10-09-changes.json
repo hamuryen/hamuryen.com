@@ -1,0 +1,149 @@
+[
+  {
+    "id": "65403083c049",
+    "title": "Video Stream Monitoring: Detect Frozen and Delayed Feeds",
+    "description": "Monitor live video beyond connection status: track RTSP traffic, frame progress, playback delay, and recording health to locate stalls in the media path.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "004795fac1a3",
+    "title": "Polyglot Monorepo Lessons: Builds, Tests and Releases",
+    "description": "Lessons from four years in a six-language monorepo: keep cross-service changes visible while improving build times, test selection, hooks, and releases.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "59aefd3c85dd",
+    "title": "GPU Video Pipeline Optimization: Copies and Queues",
+    "description": "Trace frames through a GPU video pipeline to find costly memory copies, blocking writes, and growing queues before adding hardware to handle more streams.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "c4fcd0455708",
+    "title": "Reliable AI Agents: Retries, Idempotency and State",
+    "description": "Design AI agents for lost responses and partial failures. Use stable operation IDs, idempotency, durable state, and recovery when remote tools change data.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "e57c161b62b7",
+    "title": "Monolith to Microservices: A C++ Migration Case Study",
+    "description": "Why a small team split a C++ video management system into 15 services: deployment boundaries, camera integrations, and trade-offs without containers.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "a2b6163bd521",
+    "title": "Bitcoin Mining in 2012: An NVIDIA Tesla GPU Story",
+    "description": "A personal account of mining Bitcoin on an NVIDIA Tesla GPU in 2012, the workstation used for video analytics, and what happened when a hard drive failed.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "1bbc402b1a10",
+    "title": "Monolith vs Microservices: When Simpler Works Better",
+    "description": "Weigh microservices against a modular monolith: team size, independent deployments, debugging, operational overhead, and the cost of distributed systems.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "d52749b4c8e9",
+    "title": "MCP Server Setup: Tools I Use and When CLI Is Better",
+    "description": "A practical look at MCP servers for AI coding: which integrations I kept, how to configure them, and when an existing command-line tool is a better fit.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "8c579a43ffd3",
+    "title": "AI Coding Workflow: Planning, Reviews and Small Changes",
+    "description": "A daily AI coding workflow covering research, written plans, small changes, tests, and review, with lessons from Claude Code, Cursor, and Copilot use.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "010f79152607",
+    "title": "CLAUDE.md vs AGENTS.md: AI Config Files Explained",
+    "description": "Understand CLAUDE.md, AGENTS.md, Cursor rules, settings.json, and MCP configuration: what each file controls and where team or personal instructions belong.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "7904377c10db",
+    "title": "GitHub Copilot AI Training: Privacy and Opt-Out",
+    "description": "An April 2026 guide to GitHub Copilot's data training policy: affected individual plans, excluded business plans, and the privacy opt-out setting.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "cfd76101f753",
+    "title": "E-Auction System Design: Handling Simultaneous Bids",
+    "description": "Building a national e-auction platform for 1.4 million users: concurrent bids, real-time updates, banking integrations, and rules that shape the system.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "814d35e0f91f",
+    "title": "RTSP to WebRTC: Building a Chromium-Based Video Proxy",
+    "description": "How we built a custom RTSP-to-WebRTC bridge using Chromium's WebRTC library to bring hundreds of IP-camera feeds into a browser-based command center.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "db86039edb15",
+    "title": "Kubernetes GPU Infrastructure: Lessons at 10,000 Pods",
+    "description": "Lessons from roughly 10,000 Kubernetes pods across regions: GPU inference costs, multi-cluster observability, and cloud, on-premises, and edge deployments.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "8d5c4caffcb7",
+    "title": "C++/CLI Memory Leaks: Destructors vs Finalizers",
+    "description": "Why a C++/CLI destructor alone can leave native memory allocated when Dispose is missed, and how finalizers fit into cleanup for managed .NET wrappers.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "d6a8078354c7",
+    "title": "Debugging a .NET Memory Leak in C++/CLI Interop",
+    "description": "A production debugging case study: tracing server crashes to native memory leaks across C#, C++/CLI, and ZeroMQ in an undocumented government system.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "29294851ab76",
+    "title": "GPS Speedometer Accuracy: Doppler and Sensor Fusion",
+    "description": "Explore smartphone speed estimation through GPS Doppler, Kalman filtering, and sensor fusion, including stationary drift and the limits of phone sensors.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "fc1da1a54fa9",
+    "title": "K-Means Image Quantization and Segmentation in MATLAB",
+    "description": "Explore K-means clustering for color quantization and image segmentation in MATLAB, with examples comparing cluster counts and links to the project code.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "5b4935f5e22c",
+    "title": "Laplacian Pyramid Image Blending in MATLAB",
+    "description": "Blend differently focused images with Laplacian pyramids in MATLAB. Explore Gaussian decomposition, masks, and reconstruction in an academic project.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "1086dc9ec1f7",
+    "title": "Histogram Equalization in MATLAB: A CDF-Based Guide",
+    "description": "Implement histogram equalization in MATLAB without histeq: compute the histogram, normalize intensity counts, build the CDF, and remap pixel values.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  },
+  {
+    "id": "30b45ec1e152",
+    "title": "Kredi Kartı Dolandırıcılığı: Yaşadığım İtiraz Süreci",
+    "description": "2016'da yaşadığım kredi kartı dolandırıcılığı: şüpheli harcamaları fark etmem, bankayla itiraz süreci ve sonrasında sanal kart kullanmaya geçişim.",
+    "verified": true,
+    "updated_at": "2026-10-09"
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "stem": "20-python-315-backend-faster",
+    "title": "Python 3.15 Lazy Imports: Where the Startup Cost Goes",
+    "date": "2026-10-10",
+    "time": "10:00",
+    "timezone": "Europe/Berlin",
+    "status": "scheduled",
+    "tags": [
+      "Python",
+      "Software Engineering",
+      "Performance",
+      "Backend Development",
+      "Programming"
+    ],
+    "body": "/Users/burak/Documents/personal/dev/hamuryen.com/drafts/medium/20-python-315-backend-faster-body.html",
+    "images": [
+      {
+        "marker": "MEDIUM_IMAGE_0",
+        "path": "/Users/burak/Documents/personal/dev/hamuryen.com/drafts/assets/python315-lazy-imports-cover.png",
+        "alt": "Five amber blocks sit before a blue gate on one track and after it on another, illustrating the same initialization work moving to a later stage.",
+        "caption": "The same initialization work can move past readiness and into the first useful operation."
+      },
+      {
+        "marker": "MEDIUM_IMAGE_1",
+        "path": "/Users/burak/Documents/personal/dev/hamuryen.com/drafts/medium/20-python-315-backend-faster-table-1.png",
+        "alt": "Python 3.15 timing comparison. Eager versus lazy median readiness: 26.158 and 0.000709 milliseconds. Time through the first result: 30.294 and 30.197 milliseconds. Q1–Q3 ranges shown; 60 observations per case.",
+        "caption": "Median timings with Q1–Q3 ranges, in milliseconds. CPython 3.15.0; 60 observations per case."
+      }
+    ],
+    "medium_id": "966c2b3f3b41",
+    "medium_edit_url": "https://medium.com/p/966c2b3f3b41/edit",
+    "public_url": "https://post.hamuryen.com/966c2b3f3b41",
+    "scheduled_at": "2026-10-10T10:00:00+02:00",
+    "seo_title": "Python 3.15 Lazy Imports: Startup vs First Use",
+    "seo_description": "A measured Python 3.15 lazy-import experiment shows where startup costs move, why first-use latency matters, and which backend paths need warming up.",
+    "notify_subscribers": false,
+    "verified_at": "2026-10-09",
+    "verification": {
+      "source_text_complete": true,
+      "mobile_width": 390,
+      "captions_and_alt_text": true,
+      "saved_seo_and_topics": true,
+      "scheduled_time_reopened": true
+    }
+  },
+  {
+    "stem": "21-when-is-self-hosting-ai-cheaper",
+    "title": "When Is Self-Hosting AI Actually Cheaper?",
+    "date": "2026-10-12",
+    "time": "10:00",
+    "timezone": "Europe/Berlin",
+    "status": "scheduled",
+    "tags": [
+      "Artificial Intelligence",
+      "Self Hosting",
+      "Machine Learning",
+      "Software Engineering",
+      "Cloud Computing"
+    ],
+    "body": "/Users/burak/Documents/personal/dev/hamuryen.com/drafts/medium/21-when-is-self-hosting-ai-cheaper-body.html",
+    "images": [
+      {
+        "marker": "MEDIUM_IMAGE_0",
+        "path": "/Users/burak/Documents/personal/dev/hamuryen.com/drafts/assets/self-hosting-ai-cost-cover.png",
+        "alt": "A balance scale weighs a local GPU server against a blue cloud and usage tokens, illustrating the tradeoff between ownership and pay-per-use costs.",
+        "caption": "A lower cost per token only helps if the workload can carry the cost of owning and operating the server."
+      },
+      {
+        "marker": "MEDIUM_IMAGE_1",
+        "path": "/Users/burak/Documents/personal/dev/hamuryen.com/drafts/medium/21-when-is-self-hosting-ai-cheaper-table-1.png",
+        "alt": "Illustrative assumptions: $3,600 machine over 36 months; 730 powered-on hours monthly; 100 W idle and 350 W active; electricity $0.30/kWh; 2 extra operations hours at $75/hour; $20 other monthly costs; 1 accepted request/second.",
+        "caption": "Illustrative local-host assumptions. Illustrative assumptions; no measured hardware performance or vendor prices."
+      },
+      {
+        "marker": "MEDIUM_IMAGE_2",
+        "path": "/Users/burak/Documents/personal/dev/hamuryen.com/drafts/medium/21-when-is-self-hosting-ai-cheaper-table-2.png",
+        "alt": "Illustrative monthly local versus API costs: 10,000 requests, $292.11 versus $30; 100,000, $293.98 versus $300; 500,000, $302.32 versus $1,500.",
+        "caption": "Monthly accepted requests: 10,000, 100,000 and 500,000. Costs use illustrative assumptions; extra local maintenance can reverse a narrow saving."
+      },
+      {
+        "marker": "MEDIUM_IMAGE_3",
+        "path": "/Users/burak/Documents/personal/dev/hamuryen.com/drafts/medium/21-when-is-self-hosting-ai-cheaper-table-3.png",
+        "alt": "At 0.2, 1 and 3 assumed requests/second, break-even volumes are 100,800, 97,980 and 97,526 requests/month. Serving 100,000 requests needs 138.89, 27.78 and 9.26 active hours respectively.",
+        "caption": "Rows assume 0.2, 1 and 3 accepted requests/second. These are capacity scenarios, not measured hardware results."
+      }
+    ],
+    "medium_id": "5339fec9b579",
+    "medium_edit_url": "https://medium.com/p/5339fec9b579/edit",
+    "public_url": "https://post.hamuryen.com/5339fec9b579",
+    "scheduled_at": "2026-10-12T10:00:00+02:00",
+    "seo_title": "Self-Hosting AI vs API: Costs and Break-Even",
+    "seo_description": "Compare self-hosted AI with API costs using a transparent monthly model: GPU ownership, maintenance, utilization, latency, and the break-even workload.",
+    "notify_subscribers": false,
+    "verified_at": "2026-10-09",
+    "verification": {
+      "source_text_complete": true,
+      "mobile_width": 390,
+      "captions_and_alt_text": true,
+      "saved_seo_and_topics": true,
+      "scheduled_time_reopened": true
+    }
+  },
+  {
+    "stem": "22-kafka-consumers-workflow-engine",
+    "title": "Your Kafka Consumers Are Becoming a Workflow Engine",
+    "date": "2026-10-14",
+    "time": "10:00",
+    "timezone": "Europe/Berlin",
+    "status": "scheduled",
+    "tags": [
+      "Apache Kafka",
+      "Distributed Systems",
+      "Software Architecture",
+      "Backend Development",
+      "Software Engineering"
+    ],
+    "body": "/Users/burak/Documents/personal/dev/hamuryen.com/drafts/medium/22-kafka-consumers-workflow-engine-body.html",
+    "images": [
+      {
+        "marker": "MEDIUM_IMAGE_0",
+        "path": "/Users/burak/Documents/personal/dev/hamuryen.com/drafts/assets/kafka-workflow-engine-cover.png",
+        "alt": "Video job cards move through a branching mechanical workflow; an orange gate stops one branch while another continues toward completion.",
+        "caption": "Once a job can branch, wait and be cancelled, its state needs an owner beyond the next message."
+      },
+      {
+        "marker": "MEDIUM_IMAGE_1",
+        "path": "/Users/burak/Documents/personal/dev/hamuryen.com/drafts/medium/22-kafka-consumers-workflow-engine-table-1.png",
+        "alt": "Six failure cases and decisions: deduplicate requests; reconcile timed-out dispatch; record late completion without notification; match old results to operation identity; persist expired deadlines; recover expired leases while preserving step identity.",
+        "caption": "Failure decisions for the hypothetical video-export workflow. The cancellation contract determines which transitions remain allowed."
+      }
+    ],
+    "medium_id": "6e7f424baa3c",
+    "medium_edit_url": "https://medium.com/p/6e7f424baa3c/edit",
+    "public_url": "https://post.hamuryen.com/6e7f424baa3c",
+    "scheduled_at": "2026-10-14T10:00:00+02:00",
+    "seo_title": "Kafka Workflows: Cancellation, Retries and State",
+    "seo_description": "When Kafka consumers coordinate long-running jobs, retries are only the start. Explore cancellation, idempotency, durable state, and workflow ownership.",
+    "notify_subscribers": false,
+    "verified_at": "2026-10-09",
+    "verification": {
+      "source_text_complete": true,
+      "mobile_width": 390,
+      "captions_and_alt_text": true,
+      "saved_seo_and_topics": true,
+      "scheduled_time_reopened": true
+    }
+  }
+]

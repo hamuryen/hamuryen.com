@@ -2,6 +2,16 @@
 
 Engineering essays by [Burak Hamuryen](https://hamuryen.com) on video infrastructure, native code, build systems, and reliable backends.
 
+## Scheduled for October 10–14, 2026
+
+Scheduled on Medium for 10:00 Europe/Berlin (UTC+2), verified on October 9. Captions, alt text, five topics per story and custom SEO metadata are saved. See [publication manifest](drafts/medium/publication-manifest.json).
+
+| Day | Article | Supporting material | Cover |
+|---|---|---|---|
+| Saturday, October 10 | [Python 3.15 Lazy Imports: Where the Startup Cost Goes](drafts/20-python-315-backend-faster.md) | Same-runtime lazy-import experiment, 120 observations, raw results and reproducible script | [Image](drafts/assets/python315-lazy-imports-cover.png) |
+| Monday, October 12 | [When Is Self-Hosting AI Actually Cheaper?](drafts/21-when-is-self-hosting-ai-cheaper.md) | Explicit assumptions, executable cost model, capacity and API-price sensitivity | [Image](drafts/assets/self-hosting-ai-cost-cover.png) |
+| Wednesday, October 14 | [Your Kafka Consumers Are Becoming a Workflow Engine](drafts/22-kafka-consumers-workflow-engine.md) | Worked cancellation scenario, durable handoff, failure decisions, Kafka/DB/Temporal boundaries | [Image](drafts/assets/kafka-workflow-engine-cover.png) |
+
 ## New articles
 
 | Article | Focus | Cover |
