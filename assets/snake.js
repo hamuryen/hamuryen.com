@@ -68,7 +68,7 @@
     pause.querySelector('path').setAttribute('d',status==='paused'?'m7 4 8 6-8 6Z':'M7 5v10M13 5v10');
     dialog.dataset.state=status;
     start.querySelector('span').textContent=status==='ready'?'Start game':'Restart';
-    message.textContent={ready:'Ready when you are.',playing:'Collect the icons. Avoid the walls and your tail.',paused:'Paused. Resume when you’re ready.',over:'Game over. Give it another go.',won:'You filled the board!'}[status];
+    message.textContent={ready:'Ready when you are.',playing:'Cross the edges. Collect icons. Avoid your tail.',paused:'Paused. Resume when you’re ready.',over:'Game over. Give it another go.',won:'You filled the board!'}[status];
   }
   function schedule(){
     clearInterval(timer);
@@ -87,8 +87,8 @@
       if(point.x===food.x&&point.y===food.y){chosen=point.first;break;}
       for(const [name,d] of Object.entries(dirs)){
         if(!point.first&&d.x+dirs[direction].x===0&&d.y+dirs[direction].y===0)continue;
-        const x=point.x+d.x,y=point.y+d.y,key=x+','+y;
-        if(x<0||x>=cols||y<0||y>=rows||seen.has(key))continue;
+        const x=(point.x+d.x+cols)%cols,y=(point.y+d.y+rows)%rows,key=x+','+y;
+        if(seen.has(key))continue;
         seen.add(key);queue.push({x,y,first:point.first||name});
       }
     }
@@ -97,10 +97,10 @@
   }
   function turn(next){if(status!=='playing'||pending)return;const a=dirs[direction],b=dirs[next];if(a.x+b.x===0&&a.y+b.y===0)return;pending=next;}
   function step(){
-    direction=pending||direction;pending=null;const d=dirs[direction],head={x:snake[0].x+d.x,y:snake[0].y+d.y};
+    direction=pending||direction;pending=null;const d=dirs[direction],head={x:(snake[0].x+d.x+cols)%cols,y:(snake[0].y+d.y+rows)%rows};
     const eating=head.x===food.x&&head.y===food.y;
     const body=eating?snake:snake.slice(0,-1);
-    if(head.x<0||head.x>=cols||head.y<0||head.y>=rows||body.some(p=>p.x===head.x&&p.y===head.y)){status='over';schedule();controls();return;}
+    if(body.some(p=>p.x===head.x&&p.y===head.y)){status='over';schedule();controls();return;}
     snake.unshift(head);
     if(eating){
       score++;const tech=technologies[food.tech];
