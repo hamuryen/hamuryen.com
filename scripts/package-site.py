@@ -7,7 +7,7 @@ TARGET = ROOT / '_site'
 if TARGET.exists():
     shutil.rmtree(TARGET)
 TARGET.mkdir()
-for name in ['index.html', '404.html', 'CNAME', 'favicon.ico', 'og.png',
+for name in ['index.html', '404.html', 'CNAME', 'favicon.ico', 'favicon.svg', 'apple-touch-icon.png', 'og.png',
              'robots.txt', 'sitemap.xml', 'resume.html',
              'burak-hamuryen-resume.pdf', 'burak-hamuryen-resume.txt',
              'blog-ideas.md']:

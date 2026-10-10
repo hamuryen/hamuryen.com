@@ -54,4 +54,7 @@
   });
   system.addEventListener('change', applyTheme);
   applyTheme();
+  const showSnake = Math.random() < 0.5;
+  document.querySelector('.snake-panel').hidden = !showSnake;
+  document.querySelector('.life-panel').hidden = showSnake;
 })();
