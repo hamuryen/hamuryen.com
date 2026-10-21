@@ -35,6 +35,15 @@ for skill in re.findall(r'<span class="tag">(.*?)</span>',skills):
     assert unescape(skill) in plain,skill
 schema=json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',site,re.S)[1])
 assert schema['@type']=='ProfilePage' and schema['mainEntity']['@type']=='Person'
+assert schema['isPartOf']['@type']=='WebSite'
+assert len(schema['hasPart']) == site.count('class="blog-card"')
+from urllib.robotparser import RobotFileParser
+robots = RobotFileParser()
+robots.parse((ROOT/'robots.txt').read_text().splitlines())
+for bot in ['Googlebot', 'Bingbot', 'OAI-SearchBot', 'Claude-SearchBot', 'PerplexityBot']:
+    for url in ['https://hamuryen.com/', 'https://hamuryen.com/resume.html', 'https://hamuryen.com/assets/site.js']:
+        assert robots.can_fetch(bot, url), (bot, url, 'crawler blocked')
+assert 'noindex' not in site
 for skill in ['JavaScript','Scala','RTSP','ONVIF','Temporal','NATS','ZeroMQ']:
     assert skill in schema['mainEntity']['knowsAbout']
 for employer in ['Ekin Technology','InfoDif (Information Diffusion Inc.)']:
@@ -42,4 +51,10 @@ for employer in ['Ekin Technology','InfoDif (Information Diffusion Inc.)']:
 assert 'InfoDif & Ekin Technology' not in plain
 urls=ET.parse(ROOT/'sitemap.xml').findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')
 assert {u.text for u in urls}=={'https://hamuryen.com/','https://hamuryen.com/resume.html'}
+catalog = (ROOT/'assets/snake.js').read_text().split('const dialog', 1)[0]
+icons = re.findall(r"\['([a-z0-9]+)','([^']+)'\]", catalog)
+assert icons and len({slug for slug, _ in icons}) == len(icons), 'technology catalog must be nonempty and unique'
+for slug, label in icons:
+    ET.parse(ROOT/'assets/tech'/f'{slug}.svg')
+print('PASS: technology icon assets')
 print('PASS: metadata, local links/anchors, skill parity, separate employers, schema, sitemap')

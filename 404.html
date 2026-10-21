@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>404 - Burak Hamuryen</title>
   <meta name="robots" content="noindex" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
@@ -64,7 +64,17 @@
     a:hover { background: var(--accent); color: #fff; }
   </style>
   <script>
-    (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);else if(!window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.setAttribute('data-theme','light');})();
+    (() => {
+      const system = matchMedia('(prefers-color-scheme: dark)');
+      let mode = 'system';
+      try { mode = localStorage.getItem('theme') || 'system'; } catch {}
+      const apply = () => {
+        document.documentElement.dataset.theme = ['light', 'dark'].includes(mode)
+          ? mode : (system.matches ? 'dark' : 'light');
+      };
+      system.addEventListener('change', apply);
+      apply();
+    })();
   </script>
 </head>
 <body>

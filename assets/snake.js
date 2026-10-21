@@ -30,7 +30,7 @@
   let snake, direction, pending, food, score, status='ready', timer, deck=[], earned=[];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const demoToggle = panel.querySelector('.snake-demo-toggle');
-  let demoPaused = reduced.matches, visible = true;
+  let demoPaused = reduced.matches, visible = true, motionChosen = false;
   function svg(tag,attrs) {
     const node=document.createElementNS('http://www.w3.org/2000/svg',tag);
     Object.entries(attrs).forEach(([k,v])=>node.setAttribute(k,String(v)));return node;
@@ -119,7 +119,7 @@
   dialog.addEventListener('keydown',e=>{
     const map={ArrowUp:'up',ArrowDown:'down',ArrowLeft:'left',ArrowRight:'right',w:'up',s:'down',a:'left',d:'right'};
     const next=map[e.key]||map[e.key.toLowerCase()];
-    if(next){e.preventDefault();turn(next);}else if(e.code==='Space'&&status!=='ready'&&!['over','won'].includes(status)){e.preventDefault();if(!e.repeat)togglePause();}
+    if(next&&status==='playing'){e.preventDefault();turn(next);}else if(e.code==='Space'&&!e.target.closest('button')&&status!=='ready'&&!['over','won'].includes(status)){e.preventDefault();if(!e.repeat)togglePause();}
   });
   dialog.querySelectorAll('[data-dir]').forEach(button=>button.addEventListener('click',()=>turn(button.dataset.dir)));
   let touch;
@@ -135,8 +135,8 @@
     demoToggle.querySelector('path').setAttribute('d',demoPaused?'M6 4l9 6-9 6z':'M7 5v10M13 5v10');
     schedule();
   }
-  demoToggle.addEventListener('click',()=>{demoPaused=!demoPaused;updateDemo();});
-  reduced.addEventListener('change',()=>{demoPaused=reduced.matches;updateDemo();});
+  demoToggle.addEventListener('click',()=>{motionChosen=true;demoPaused=!demoPaused;updateDemo();});
+  reduced.addEventListener('change',()=>{if(!motionChosen)demoPaused=reduced.matches;updateDemo();});
   if('IntersectionObserver' in window)new IntersectionObserver(([entry])=>{visible=entry.isIntersecting;schedule();}).observe(panel);
   reset();updateDemo();
 })();

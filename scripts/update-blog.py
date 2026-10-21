@@ -38,16 +38,22 @@ def main():
                 time.sleep(2 ** attempt)
     feed = ET.fromstring(raw)
     cards = []
-    for item in feed.findall('./channel/item')[:6]:
+    for item in feed.findall('./channel/item'):
         title = item.findtext('title', '').strip()
         url = item.findtext('link', '').split('?')[0]
         if not title or urlsplit(url).scheme != 'https':
             continue
         parser = Images()
         parser.feed(item.findtext('{http://purl.org/rss/1.0/modules/content/}encoded', ''))
-        date = parsedate_to_datetime(item.findtext('pubDate'))
+        try:
+            date = parsedate_to_datetime(item.findtext('pubDate', ''))
+        except (TypeError, ValueError, OverflowError):
+            print('Skipping feed item with missing or invalid publication date.', file=sys.stderr)
+            continue
         picture = f'<div class="blog-image"><img src="{escape(parser.src, quote=True)}" alt="" loading="lazy" width="600" height="343"></div>' if parser.src else ''
         cards.append(f'''<a class="blog-card" href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">{picture}<div class="blog-copy"><span class="blog-meta"><time datetime="{date.date().isoformat()}">{date.strftime('%b %d, %Y')}</time> · MEDIUM</span><h3>{escape(title)}</h3><span class="blog-read">Read story ↗<span class="sr-only"> (opens in a new tab)</span></span></div></a>''')
+        if len(cards) == 6:
+            break
     if not cards:
         raise SystemExit('No articles found; existing cards were preserved.')
     path = ROOT / 'index.html'

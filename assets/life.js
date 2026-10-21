@@ -6,7 +6,7 @@
   const grid = field.querySelector('svg');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const cols = 32, rows = 14;
-  let cells = new Uint8Array(cols * rows), paused = reduced.matches, visible = true, timer, generation = 0;
+  let cells = new Uint8Array(cols * rows), paused = reduced.matches, visible = true, timer, generation = 0, motionChosen = false;
   const tiles = Array.from(cells, (_, i) => {
     const tile = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
     Object.entries({x:16+i%cols*10,y:13+Math.floor(i/cols)*10,width:7,height:7,rx:1.5,class:'life-cell'}).forEach(([k,v])=>tile.setAttribute(k,v));
@@ -27,7 +27,7 @@
   }
   function update() {
     clearInterval(timer);if(!paused&&visible&&!document.hidden)timer=setInterval(step,480);
-    toggle.hidden=reduced.matches;toggle.setAttribute('aria-pressed',String(paused));
+    toggle.setAttribute('aria-pressed',String(paused));
     toggle.setAttribute('aria-label',paused?'Play illustration animation':'Pause illustration animation');
     toggle.querySelector('path').setAttribute('d',paused?'M6 4l9 6-9 6z':'M7 5v10M13 5v10');
   }
@@ -36,8 +36,8 @@
     if(e.detail&&grid.getScreenCTM()) {const p=grid.createSVGPoint();p.x=e.clientX;p.y=e.clientY;const local=p.matrixTransform(grid.getScreenCTM().inverse());x=Math.max(0,Math.min(29,Math.floor((local.x-16)/10)-1));y=Math.max(0,Math.min(11,Math.floor((local.y-13)/10)-1));}
     plant(x,y);paint();
   });
-  toggle.addEventListener('click',()=>{paused=!paused;update();});
-  reduced.addEventListener('change',()=>{paused=reduced.matches;update();});
+  toggle.addEventListener('click',()=>{motionChosen=true;paused=!paused;update();});
+  reduced.addEventListener('change',()=>{if(!motionChosen)paused=reduced.matches;update();});
   document.addEventListener('visibilitychange',update);
   if('IntersectionObserver' in window)new IntersectionObserver(([e])=>{visible=e.isIntersecting;update();}).observe(panel);
   update();

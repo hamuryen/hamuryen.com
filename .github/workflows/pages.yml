@@ -29,6 +29,10 @@ jobs:
       - name: Report feed failure
         if: steps.medium.outcome == 'failure'
         run: echo '::warning::Medium feed could not be refreshed. Publishing the saved cards; the next scheduled run will retry.'
+      - name: Test feed refresh
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
+      - name: Synchronize publication metadata
+        run: python3 scripts/update-seo.py
       - name: Check content
         run: python3 tests/content_audit.py
       - name: Prepare public files

@@ -6,7 +6,10 @@
   let activeId;
   function navigate() {
     const id = location.hash.slice(1);
-    const active = sections.find(section => section.id === id) || sections[0];
+    const requested = sections.find(section => section.id === id);
+    const active = requested || (id === 'main' && sections.find(section => section.id === activeId)) || sections[0];
+    if (id && id !== 'main' && !requested) history.replaceState(null, '', '#' + active.id);
+    const changing = Boolean(activeId);
     if (active.id === activeId) return false;
     activeId = active.id;
     sections.forEach(section => { section.hidden = section !== active; });
@@ -15,6 +18,9 @@
       else link.removeAttribute('aria-current');
     });
     content.scrollTop = 0;
+    if (changing && !matchMedia('(min-width: 1050px)').matches) {
+      content.scrollIntoView({ block: 'start', behavior: 'instant' });
+    }
     return true;
   }
   root.classList.add('js');
@@ -32,6 +38,11 @@
       navigate();
       content.focus({ preventScroll: true });
     });
+  });
+  document.querySelector('.skip-link').addEventListener('click', event => {
+    event.preventDefault();
+    content.focus({ preventScroll: true });
+    content.scrollIntoView({ block: 'start', behavior: 'instant' });
   });
   const system = matchMedia('(prefers-color-scheme: light)');
   let mode = 'system';

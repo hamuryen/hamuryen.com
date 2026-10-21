@@ -20,5 +20,6 @@ node_modules/
 .env.*
 !.env.example
 playwright-report/
+.playwright-mcp/
 test-results/
 _site/
